@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Clone</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #eaeded;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #131921;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff9900;
+    }
+
+    .search-box {
+      flex: 1;
+      margin: 0 20px;
+      display: flex;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #febd69;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .nav-right span {
+      margin-left: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* Banner */
+    .banner {
+      background: url("https://images.unsplash.com/photo-1607082350899-7e105aa886ae") center/cover no-repeat;
+      height: 300px;
+    }
+
+    /* Products */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 4px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product h4 {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .product p {
+      color: green;
+      font-weight: bold;
+    }
+
+    .product button {
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      background: #ffd814;
+      border: 1px solid #fcd200;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">amazon</div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search Amazon">
+    <button><i class="fa fa-search"></i></button>
+  </div>
+
+  <div class="nav-right">
+    <span>Hello, Sign in</span>
+    <span>Orders</span>
+    <span><i class="fa fa-shopping-cart"></i> Cart</span>
+  </div>
+</div>
+
+<!-- Banner -->
+<div class="banner"></div>
+
+<!-- Products Section -->
+<div class="products">
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/71vFKBpKakL._SX679_.jpg">
+    <h4>Wireless Headphones</h4>
+    <p>₹2,999</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/61EXU8BuGZL._SX679_.jpg">
+    <h4>Smart Watch</h4>
+    <p>₹4,999</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/71UypkUjStL._SX679_.jpg">
+    <h4>Men Shoes</h4>
+    <p>₹1,999</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/71S8U9VzLTL._SX679_.jpg">
+    <h4>Backpack</h4>
+    <p>₹1,499</p>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<footer>
+  © 2026 Amazon Clone | Frontend Project
+</footer>
+
+<script>
+  function addToCart() {
+    alert("Product added to cart (Frontend Demo)");
+  }
+</script>
+
+</body>
+</html>
